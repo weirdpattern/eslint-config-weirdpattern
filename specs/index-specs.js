@@ -24,15 +24,25 @@
 
 'use strict';
 
-const assert = require('assert');
+const { resolve } = require('path');
+
 const eslint = require('eslint');
 const conf = require('../');
 
 describe('eslint-config-weirdpattern', () => {
   it('completes analysis without errors', () => {
     const files = [
-      'lib/index.js',
-      'specs/index-specs.js',
+      resolve('lib', 'index.js'),
+      resolve('lib', 'rules', 'best-practices.js'),
+      resolve('lib', 'rules', 'ecma-script.js'),
+      resolve('lib', 'rules', 'environment.js'),
+      resolve('lib', 'rules', 'possible-errors.js'),
+      resolve('lib', 'rules', 'strict.js'),
+      resolve('lib', 'rules', 'stylistic-issues.js'),
+      resolve('lib', 'rules', 'variables.js'),
+      resolve('lib', 'utils', 'reporter.js'),
+      resolve('specs', 'utils', 'reporter-specs.js'),
+      resolve('specs', 'index-specs.js'),
     ];
 
     const options = {
@@ -46,7 +56,7 @@ describe('eslint-config-weirdpattern', () => {
     expect(report.warningCount).toEqual(0);
 
     files.forEach((file, index) => {
-      expect(report.results[index].filePath.endsWith(file)).toBeThruty();
+      expect(report.results[index].filePath.endsWith(file)).toBeTruthy();
     });
   });
 });
