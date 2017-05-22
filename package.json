@@ -53,10 +53,10 @@
   },
 
   "scripts": {
+    "check": "npm-check",
     "test": "jest --config .jest.json",
     "coverage": "jest --config .jest.json --coverage",
     "coveralls": "npm run coverage && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
-    "prepublish": "npm run test && npm run check",
-    "check": "npm-check"
+    "prepublish": "npm run test && npm run check"
   }
 }
