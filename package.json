@@ -1,0 +1,60 @@
+{
+  "license": "MIT",
+  "version": "1.0.0",
+
+  "name": "eslint-config-weirdpattern",
+  "description": " ESLint shareable config for JavaScript projects",
+  "author": "patricio trevino <patricio@weirdpattern.com>",
+
+  "main": "./lib/index.js",
+  "files": [
+    "lib"
+  ],
+
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/weirdpattern/eslint-config-weirdpattern.git"
+  },
+
+  "engines": {
+    "node": ">=4.4.3"
+  },
+
+  "keywords": [
+    "weirdpattern",
+    "code",
+    "quality",
+    "style",
+    "lint",
+    "linter",
+    "jscs",
+    "jshint",
+    "jslint",
+    "eslint",
+    "validate",
+    "code style",
+    "strict",
+    "check",
+    "checker",
+    "verify",
+    "enforce",
+    "hint"
+  ],
+
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "npm-check": "^5.4.4"
+  },
+
+  "peerDependencies": {
+    "eslint": ">=3.19.0"
+  },
+
+  "scripts": {
+    "test": "jest --config .jest.json",
+    "coverage": "jest --config .jest.json --coverage",
+    "coveralls": "npm run coverage && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
+    "prepublish": "npm run check && npm run test",
+    "check": "npm-check"
+  }
+}
