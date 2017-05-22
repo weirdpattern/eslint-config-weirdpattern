@@ -24,7 +24,7 @@
 
 'use strict';
 
-const path = require('path');
+const { resolve } = require('path');
 
 const eslint = require('eslint');
 const conf = require('../');
@@ -32,17 +32,17 @@ const conf = require('../');
 describe('eslint-config-weirdpattern', () => {
   it('completes analysis without errors', () => {
     const files = [
-      path.resolve('lib', 'index.js'),
-      path.resolve('lib', 'rules', 'best-practices.js'),
-      path.resolve('lib', 'rules', 'ecma-script.js'),
-      path.resolve('lib', 'rules', 'environment.js'),
-      path.resolve('lib', 'rules', 'possible-errors.js'),
-      path.resolve('lib', 'rules', 'strict.js'),
-      path.resolve('lib', 'rules', 'stylistic-issues.js'),
-      path.resolve('lib', 'rules', 'variables.js'),
-      path.resolve('lib', 'utils', 'reporter.js'),
-      path.resolve('specs', 'utils', 'reporter-specs.js'),
-      path.resolve('specs', 'index-specs.js'),
+      resolve('lib', 'index.js'),
+      resolve('lib', 'rules', 'best-practices.js'),
+      resolve('lib', 'rules', 'ecma-script.js'),
+      resolve('lib', 'rules', 'environment.js'),
+      resolve('lib', 'rules', 'possible-errors.js'),
+      resolve('lib', 'rules', 'strict.js'),
+      resolve('lib', 'rules', 'stylistic-issues.js'),
+      resolve('lib', 'rules', 'variables.js'),
+      resolve('lib', 'utils', 'reporter.js'),
+      resolve('specs', 'utils', 'reporter-specs.js'),
+      resolve('specs', 'index-specs.js'),
     ];
 
     const options = {
