@@ -1,4 +1,5 @@
-# eslint-config-weirdpattern [![Build Status](https://travis-ci.org/weirdpattern/eslint-config-weirdpattern.svg?branch=master)](https://travis-ci.org/weirdpattern/eslint-config-weirdpattern)
+# eslint-config-weirdpattern   
+[![Build Status](https://travis-ci.org/weirdpattern/eslint-config-weirdpattern.svg?branch=master)](https://travis-ci.org/weirdpattern/eslint-config-weirdpattern) [![Coverage Status](https://coveralls.io/repos/github/weirdpattern/eslint-config-weirdpattern/badge.svg?branch=master)](https://coveralls.io/github/weirdpattern/eslint-config-weirdpattern?branch=master)
 
 > ESLint [shareable config](http://eslint.org/docs/developer-guide/shareable-configs.html) for JavaScript projects
 

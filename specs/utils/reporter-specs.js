@@ -24,7 +24,11 @@
 
 'use strict';
 
-const { off, warn, error } = require('../../lib/utils/reporter');
+const reporter = require('../../lib/utils/reporter');
+
+const off = reporter.off;
+const warn = reporter.warn;
+const error = reporter.error;
 
 describe('reporter', () => {
   describe('off', () => {
