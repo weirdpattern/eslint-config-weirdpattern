@@ -45,7 +45,9 @@
     "eslint": "^3.19.0",
     "npm-check": "^5.4.4",
     "jest": "^20.0.3",
-    "jest-cli": "^20.0.3"
+    "jest-cli": "^20.0.3",
+    "minicat": "^1.0.0",
+    "coveralls": "^2.13.1"
   },
 
   "peerDependencies": {
@@ -56,7 +58,7 @@
     "check": "npm-check",
     "test": "jest --config .jest.json",
     "coverage": "jest --config .jest.json --coverage",
-    "coveralls": "npm run coverage && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
+    "coveralls": "npm run coverage && minicat coverage/lcov.info | coveralls",
     "prepublish": "npm run test && npm run check"
   }
 }
