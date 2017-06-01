@@ -1,6 +1,6 @@
 {
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.1.0",
 
   "name": "eslint-config-weirdpattern",
   "description": " ESLint shareable config for JavaScript projects",
@@ -42,8 +42,6 @@
   ],
 
   "devDependencies": {
-    "eslint": "^3.19.0",
-    "npm-check": "^5.4.4",
     "jest": "^20.0.3",
     "jest-cli": "^20.0.3",
     "minicat": "^1.0.0",
@@ -51,11 +49,12 @@
   },
 
   "peerDependencies": {
-    "eslint": ">=3.19.0"
+    "eslint": "^3.19.0",
+    "babel-eslint": "^7.2.3"
   },
 
   "scripts": {
-    "check": "npm-check",
+    "check": "npm outdated",
     "test": "jest --config .jest.json",
     "coverage": "jest --config .jest.json --coverage",
     "coveralls": "npm run coverage && minicat coverage/lcov.info | coveralls",
