@@ -20,7 +20,10 @@ describe('eslint-config-weirdpattern', () => {
       resolve('lib', 'rules', 'best-practices.js'),
       resolve('lib', 'rules', 'ecma-script.js'),
       resolve('lib', 'rules', 'environment.js'),
+      resolve('lib', 'rules', 'import.js'),
+      resolve('lib', 'rules', 'jsx-a11y.js'),
       resolve('lib', 'rules', 'possible-errors.js'),
+      resolve('lib', 'rules', 'react.js'),
       resolve('lib', 'rules', 'strict.js'),
       resolve('lib', 'rules', 'stylistic-issues.js'),
       resolve('lib', 'rules', 'variables.js'),
@@ -30,7 +33,8 @@ describe('eslint-config-weirdpattern', () => {
     ];
 
     const options = {
-      envs: ['node', 'es6', 'jest'],
+      envs: ['browser', 'commonjs', 'es6', 'jest', 'node'],
+      plugins: ['import', 'react', 'jsx-a11y'],
       useEslintrc: false,
       rules: conf.rules,
     };

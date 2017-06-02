@@ -1,25 +1,20 @@
 {
   "license": "MIT",
   "version": "1.1.0",
-
   "name": "eslint-config-weirdpattern",
   "description": " ESLint shareable config for JavaScript projects",
   "author": "patricio trevino <patricio@weirdpattern.com>",
-
   "main": "./lib/index.js",
   "files": [
     "lib"
   ],
-
   "repository": {
     "type": "git",
     "url": "https://www.github.com/weirdpattern/eslint-config-weirdpattern.git"
   },
-
   "engines": {
     "node": ">=6.0.0"
   },
-
   "keywords": [
     "weirdpattern",
     "code",
@@ -40,19 +35,23 @@
     "enforce",
     "hint"
   ],
-
   "devDependencies": {
+    "coveralls": "^2.13.1",
+    "eslint": "^3.19.0",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.0.1",
     "jest": "^20.0.3",
     "jest-cli": "^20.0.3",
-    "minicat": "^1.0.0",
-    "coveralls": "^2.13.1"
+    "minicat": "^1.0.0"
   },
-
   "peerDependencies": {
     "eslint": "^3.19.0",
-    "babel-eslint": "^7.2.3"
+    "babel-eslint": "^7.2.3",
+    "eslint-plugin-react": "^7.0.1",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-import": "^2.3.0"
   },
-
   "scripts": {
     "check": "npm outdated",
     "test": "jest --config .jest.json",
