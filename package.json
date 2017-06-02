@@ -62,8 +62,5 @@
     "coverage": "jest --config .jest.json --coverage",
     "coveralls": "npm run coverage && minicat coverage/lcov.info | coveralls",
     "prepublish": "npm run test && npm run check"
-  },
-  "dependencies": {
-    "babel-eslint": "^7.2.3"
   }
 }
