@@ -8,7 +8,7 @@
 
 'use strict';
 
-const jsxA11yPlugin = require('./rules/jsx-a11y');
+const jsxA11yPlugin = require('./lib/rules/jsx-a11y');
 
 module.exports = {
   parser: 'babel-eslint',

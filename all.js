@@ -8,16 +8,16 @@
 
 'use strict';
 
-const possibleErrors  = require('./rules/possible-errors');
-const bestPractices   = require('./rules/best-practices');
-const strict          = require('./rules/strict');
-const variables       = require('./rules/variables');
-const environment     = require('./rules/environment');
-const stylisticIssues = require('./rules/stylistic-issues');
-const ecmaScript      = require('./rules/ecma-script');
-const importPlugin    = require('./rules/import');
-const reactPlugin     = require('./rules/react');
-const jsxA11yPlugin   = require('./rules/jsx-a11y');
+const possibleErrors  = require('./lib/rules/possible-errors');
+const bestPractices   = require('./lib/rules/best-practices');
+const strict          = require('./lib/rules/strict');
+const variables       = require('./lib/rules/variables');
+const environment     = require('./lib/rules/environment');
+const stylisticIssues = require('./lib/rules/stylistic-issues');
+const ecmaScript      = require('./lib/rules/ecma-script');
+const importPlugin    = require('./lib/rules/import');
+const reactPlugin     = require('./lib/rules/react');
+const jsxA11yPlugin   = require('./lib/rules/jsx-a11y');
 
 module.exports = {
   parser: 'babel-eslint',

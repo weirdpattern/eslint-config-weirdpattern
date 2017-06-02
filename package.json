@@ -1,11 +1,15 @@
 {
   "license": "MIT",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "name": "eslint-config-weirdpattern",
   "description": " ESLint shareable config for JavaScript projects",
   "author": "patricio trevino <patricio@weirdpattern.com>",
-  "main": "./lib/index.js",
+  "main": "./index.js",
   "files": [
+    "index.js",
+    "all.js",
+    "react.js",
+    "jsx-a11y.js",
     "lib"
   ],
   "repository": {
@@ -58,5 +62,8 @@
     "coverage": "jest --config .jest.json --coverage",
     "coveralls": "npm run coverage && minicat coverage/lcov.info | coveralls",
     "prepublish": "npm run test && npm run check"
+  },
+  "dependencies": {
+    "babel-eslint": "^7.2.3"
   }
 }

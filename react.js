@@ -8,7 +8,7 @@
 
 'use strict';
 
-const reactPlugin = require('./rules/react');
+const reactPlugin = require('./lib/rules/react');
 
 module.exports = {
   parser: 'babel-eslint',

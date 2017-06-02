@@ -40,6 +40,12 @@ describe('eslint-config-weirdpattern', () => {
     };
 
     const report = new eslint.CLIEngine(options).executeOnFiles(files);
+    for (const result of report.results) {
+      console.log(result.filePath);
+      for (const message of result.messages) {
+        console.log(message);
+      }
+    }
     expect(report.errorCount).toEqual(0);
     expect(report.warningCount).toEqual(0);
 
