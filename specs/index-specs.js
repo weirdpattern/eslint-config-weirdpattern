@@ -16,7 +16,10 @@ const conf = require('../');
 describe('eslint-config-weirdpattern', () => {
   it('completes analysis without errors', () => {
     const files = [
-      resolve('lib', 'index.js'),
+      resolve('index.js'),
+      resolve('all.js'),
+      resolve('react.js'),
+      resolve('jsx-a11y.js'),
       resolve('lib', 'rules', 'best-practices.js'),
       resolve('lib', 'rules', 'ecma-script.js'),
       resolve('lib', 'rules', 'environment.js'),
@@ -40,12 +43,6 @@ describe('eslint-config-weirdpattern', () => {
     };
 
     const report = new eslint.CLIEngine(options).executeOnFiles(files);
-    for (const result of report.results) {
-      console.log(result.filePath);
-      for (const message of result.messages) {
-        console.log(message);
-      }
-    }
     expect(report.errorCount).toEqual(0);
     expect(report.warningCount).toEqual(0);
 
